@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <objbase.h>
+
+/** Utlizar Mingw-w64 para obtener referencia a cada interfaz **/
 #include <mmdeviceapi.h>
 #include <endpointvolume.h>
 

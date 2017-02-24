@@ -42,7 +42,7 @@ int main()
 	    /** De la interfaz MMDeviceEnumerator llamamos al metodo GetDefaultAudioEndpoint para obtener la interfaz MMDevice **/
             if((resp = i_deviceEnum->lpVtbl->GetDefaultAudioEndpoint(i_deviceEnum, 0, 0, &i_device)) == S_OK){
 
-		/** De la interfaz MMDevice llamamos al metodo Activatet para obtener la interfaz IAudioEndpointVolume **/
+		/** De la interfaz MMDevice llamamos al metodo Activate para obtener la interfaz IAudioEndpointVolume **/
                 if((resp = i_device->lpVtbl->Activate(i_device, &IID_IAudioEndpointVolume, CLSCTX_ALL, NULL, (void**)&i_audioend)) == S_OK){
 
                     if(function_volume(i_audioend) == 1){

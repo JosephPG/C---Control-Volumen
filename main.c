@@ -69,6 +69,7 @@ int main()
         return 1;
     }
 
+    /** Liberamos recursos **/	
     coUnit(); 
     FreeLibrary(getDll);
     return 0;

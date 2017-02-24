@@ -1,7 +1,7 @@
 #Control de volumen con CORE AUDIO API (windows API)
 
-Para control del volumen del sistema se debe acceder a la librería COM de windows, la interfaz encargada de esto es
-IAudioEndpointVolume para esto:
+Para control del volumen del sistema se debe acceder a la librería COM de windows, la interfaz encargada es
+IAudioEndpointVolume, para esto:
 
 * Iniciar la librería COM.
 * Obtener puntero a la interfaz IMMDeviceEnumerator.

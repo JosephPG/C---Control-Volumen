@@ -34,13 +34,13 @@ int main()
     /** Inicamos libreria COM **/
     if((resp = coInit(NULL)) == S_OK){
 
-		/** Obtenemos la interfaz MMDeviceEnumerator **/
+	/** Obtenemos la interfaz MMDeviceEnumerator **/
         if((resp = coCreateIns(&CLSID_MMDeviceEnumerator, NULL, CLSCTX_INPROC_SERVER, &IID_IMMDeviceEnumerator, (void**)&i_deviceEnum)) == S_OK){
 
-			/** De la interfaz MMDeviceEnumerator llamamos al metodo GetDefaultAudioEndpoint para obtener la interfaz MMDevice **/
+	    /** De la interfaz MMDeviceEnumerator llamamos al metodo GetDefaultAudioEndpoint para obtener la interfaz MMDevice **/
             if((resp = i_deviceEnum->lpVtbl->GetDefaultAudioEndpoint(i_deviceEnum, 0, 0, &i_device)) == S_OK){
 
-				/** De la interfaz MMDevice llamamos al metodo Activatet para obtener la interfaz IAudioEndpointVolume **/
+		/** De la interfaz MMDevice llamamos al metodo Activatet para obtener la interfaz IAudioEndpointVolume **/
                 if((resp = i_device->lpVtbl->Activate(i_device, &IID_IAudioEndpointVolume, CLSCTX_ALL, NULL, (void**)&i_audioend)) == S_OK){
 
                     if(function_volume(i_audioend) == 1){
@@ -73,7 +73,7 @@ int main()
 }
 
 
-//Opciones para el control de volumen
+/** Opciones para el control de volumen **/
 int function_volume(IAudioEndpointVolume* control){
     int opcion, resp, salir;
     HRESULT ok;

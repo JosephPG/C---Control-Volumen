@@ -7,4 +7,4 @@ IAudioEndpointVolume, para esto:
 * Obtener puntero a la interfaz IMMDeviceEnumerator.
 * Mediante lo ultimo, obtener puntero a la interfaz IMMDevice.
 * Mediante lo ultimo, obtener un puntero IAudioEndpointVolume
-* Esta ultima interfaz nos brindara los eventos para silencia, cambiar volumen, y verificar estado del volumen.
+* Esta ultima interfaz nos brindara los eventos para silenciar, cambiar volumen, y verificar estado del volumen.
